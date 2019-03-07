@@ -100,8 +100,9 @@ $(document).ready(function() {
 
   function resetTimer() {
     clearInterval(intervalId);
-    time = 31;
+    time = 30;
     intervalId = setInterval(decrement, 1000);
+    displayTimer();
   }
 
   //   Questions are selected by questionNumber. displayQuestions displays the current question per where the user is in the program.
