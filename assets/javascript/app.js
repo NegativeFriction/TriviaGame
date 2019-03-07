@@ -5,7 +5,7 @@ $(document).ready(function() {
   //   Questions were lovingly stolen from https://chartcons.com/100-bar-trivia-questions-2/
   var questionsArray = [
     {
-      question: "Whihch US State is on the label of Jack Daniel's Whiskey?",
+      question: "Which US State is on the label of Jack Daniel's Whiskey?",
       answers: ["Louisiana", "Tennessee", "Indiana", "Kentucky"],
       correctAnswer: "Tennessee"
     },
@@ -27,7 +27,7 @@ $(document).ready(function() {
     },
     {
       question: "In what country is Port Said?",
-      answers: ["Spain", "Egypt", "Somolia", "Portugal"],
+      answers: ["Spain", "Egypt", "Somalia", "Portugal"],
       correctAnswer: "Egypt"
     },
     {
@@ -53,7 +53,7 @@ $(document).ready(function() {
     },
     {
       question:
-        "At what temperature is degrees Farenheit the same value as degrees Celsius",
+        "At what temperature is degrees Fahrenheit the same value as degrees Celsius",
       answers: ["40 degrees", "-40 degrees", "0 degrees", "232 degrees"],
       correctAnswer: "-40 degrees"
     },
@@ -83,6 +83,8 @@ $(document).ready(function() {
     var newDiv = $("<div id='question'>");
 
     newDiv.text(questionsArray[questionNumber].question);
+    newSpace = $("<br>");
+    newDiv.append(newSpace);
 
     for (
       var answerNumber = 0;
@@ -92,7 +94,9 @@ $(document).ready(function() {
       var newAnswer = $("<div class = 'answer'>");
 
       newAnswer.text(questionsArray[questionNumber].answers[answerNumber]);
+      newSpace = $("<br>");
       newDiv.append(newAnswer);
+      newDiv.append(newSpace);
     }
     mainBody.append(newDiv);
   }
@@ -114,12 +118,12 @@ $(document).ready(function() {
   function displayCorrect() {
     console.log("correct");
     mainBody.empty();
-    var newDiv = $("<div class = 'correct'>");
+    var newDiv = $("<div class = 'check'>");
     newDiv.text("Correct!");
-    newImg = $("<img>");
+    newImg = $("<img class='image'>");
     newImg.attr("src", winimage);
-    newDiv.append(newImg);
     mainBody.append(newDiv);
+    mainBody.append(newImg);
   }
 
   //   Insult the user for the incorrect answer.
@@ -127,12 +131,16 @@ $(document).ready(function() {
     console.log("incorrect");
     console.log("correct");
     mainBody.empty();
-    var newDiv = $("<div class = 'incorrect'>");
-    newDiv.text("Wrong!");
-    newImg = $("<img>");
+    var newDiv = $("<div class = 'check'>");
+    newDiv.text(
+      "Wrong! The correct answer was " +
+        questionsArray[questionNumber].correctAnswer +
+        "!"
+    );
+    newImg = $("<img class = 'image'>");
     newImg.attr("src", loseimage);
-    newDiv.append(newImg);
     mainBody.append(newDiv);
+    mainBody.append(newImg);
   }
 
   //   Initial call to display the first question

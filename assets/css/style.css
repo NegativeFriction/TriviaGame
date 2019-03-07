@@ -1,0 +1,50 @@
+body {
+  background-color: green;
+}
+
+#mainBody {
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+  background-color: pink;
+  padding: 1rem;
+}
+
+#question {
+  font-size: 40px;
+  text-align: center;
+}
+
+.answer {
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: blue;
+  display: inline-block;
+}
+
+.answer:hover {
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: darkblue;
+  display: inline-block;
+}
+
+.image {
+  /* align-self: center; */
+  display: block;
+  margin: auto;
+  /* margin-left: 25% !important; */
+  width: 300px;
+  height: 300px;
+}
+
+.check {
+  margin: auto;
+  text-align: center;
+}
