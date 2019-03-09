@@ -1,13 +1,16 @@
 body {
-  background-color: green;
+  background-image: url("./../images/beer.png");
+  /* background-repeat: no-repeat; */
 }
 
 #mainBody {
   width: 80%;
+  height: 400px;
   margin: auto;
   margin-top: 10%;
-  background-color: pink;
+  background-image: url("./../images/paper.jpg");
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 #question {
@@ -21,7 +24,8 @@ body {
   margin: auto;
   margin-top: 1rem;
   padding: 1rem;
-  background-color: blue;
+  background-color: rgba(255, 255, 255, 0);
+
   display: inline-block;
 }
 
@@ -31,11 +35,12 @@ body {
   margin: auto;
   margin-top: 1rem;
   padding: 1rem;
-  background-color: darkblue;
+  background-color: rgba(255, 255, 255, 0);
   display: inline-block;
+  font-weight: bold;
 }
 
-.image {
+#image {
   /* align-self: center; */
   display: block;
   margin: auto;
@@ -47,4 +52,16 @@ body {
 .check {
   margin: auto;
   text-align: center;
+}
+
+#timer {
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-image: url("./../images/beer.jpg");
+  /* display: inline-block; */
+  box-sizing: border-box;
+  width: 10%;
+  height: 5rem;
+  padding: 1rem;
 }
